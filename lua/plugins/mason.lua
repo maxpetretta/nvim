@@ -11,7 +11,7 @@ return {
       "json-lsp",
       "lemminx",
       "lua-language-server",
-      "marksman", 
+      "marksman",
       "pylyzer",
       "shfmt",
       "sqls",
@@ -22,6 +22,7 @@ return {
       "vim-language-server",
       "vtsls",
       "yaml-language-server",
-    }
-  }
+    },
+  },
 }
+

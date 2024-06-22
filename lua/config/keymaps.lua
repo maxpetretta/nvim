@@ -3,31 +3,31 @@
 -- Add any additional keymaps here
 
 -- Moving between splits & tmux panes
-vim.keymap.set('n', '<C-n>', require('smart-splits').move_cursor_left)
-vim.keymap.set('n', '<C-e>', require('smart-splits').move_cursor_down)
-vim.keymap.set('n', '<C-i>', require('smart-splits').move_cursor_up) -- Overrides jumplist next
-vim.keymap.set('n', '<C-o>', require('smart-splits').move_cursor_right) -- Overrides jumplist previous
-vim.keymap.set('n', '<C-Tab>', require('smart-splits').move_cursor_previous)
+vim.keymap.set("n", "<C-n>", require("smart-splits").move_cursor_left, { desc = "Move Cursor Left" })
+vim.keymap.set("n", "<C-e>", require("smart-splits").move_cursor_down, { desc = "Move Cursor Down" })
+vim.keymap.set("n", "<C-i>", require("smart-splits").move_cursor_up, { desc = "Move Cursor Up" }) -- Overrides jumplist next
+vim.keymap.set("n", "<C-o>", require("smart-splits").move_cursor_right, { desc = "Move Cursor Right" }) -- Overrides jumplist previous
+vim.keymap.set("n", "<C-Tab>", require("smart-splits").move_cursor_previous, { desc = "Move Cursor Previous" })
 
 -- Resize splits & tmux panes
-vim.keymap.set('n', '<C-Left>', require('smart-splits').resize_left)
-vim.keymap.set('n', '<C-Down>', require('smart-splits').resize_down)
-vim.keymap.set('n', '<C-Up>', require('smart-splits').resize_up)
-vim.keymap.set('n', '<C-Right>', require('smart-splits').resize_right)
+vim.keymap.set("n", "<C-Left>", require("smart-splits").resize_left, { desc = "Resize Left" })
+vim.keymap.set("n", "<C-Down>", require("smart-splits").resize_down, { desc = "Resize Down" })
+vim.keymap.set("n", "<C-Up>", require("smart-splits").resize_up, { desc = "Resize Up" })
+vim.keymap.set("n", "<C-Right>", require("smart-splits").resize_right, { desc = "Resize Right" })
 
 -- Swapping buffers between windows
-vim.keymap.set('n', '<leader><leader>n', require('smart-splits').swap_buf_left)
-vim.keymap.set('n', '<leader><leader>e', require('smart-splits').swap_buf_down)
-vim.keymap.set('n', '<leader><leader>i', require('smart-splits').swap_buf_up)
-vim.keymap.set('n', '<leader><leader>o', require('smart-splits').swap_buf_right)
+vim.keymap.set("n", "<leader><leader>n", require("smart-splits").swap_buf_left, { desc = "Swap Buffer Left" })
+vim.keymap.set("n", "<leader><leader>e", require("smart-splits").swap_buf_down, { desc = "Swap Buffer Down" })
+vim.keymap.set("n", "<leader><leader>i", require("smart-splits").swap_buf_up, { desc = "Swap Buffer Up" })
+vim.keymap.set("n", "<leader><leader>o", require("smart-splits").swap_buf_right, { desc = "Swap Buffer Right" })
 
 -- Move Lines
-vim.keymap.set("n", "<A-e>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
-vim.keymap.set("n", "<A-i>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
-vim.keymap.set("i", "<A-e>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-vim.keymap.set("i", "<A-i>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-vim.keymap.set("v", "<A-e>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
-vim.keymap.set("v", "<A-i>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+vim.keymap.set("n", "<A-Down>", "<cmd>m .+1<cr>==", { desc = "Move Line Down" })
+vim.keymap.set("n", "<A-Up>", "<cmd>m .-2<cr>==", { desc = "Move Line Up" })
+vim.keymap.set("i", "<A-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Line Down" })
+vim.keymap.set("i", "<A-Up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Line Up" })
+vim.keymap.set("v", "<A-Down>", ":m '>+1<cr>gv=gv", { desc = "Move Line Down" })
+vim.keymap.set("v", "<A-Up>", ":m '<-2<cr>gv=gv", { desc = "Move Line Up" })
 
 -- Terminal Mappings
 vim.keymap.set("t", "<C-n>", "<cmd>wincmd h<cr>", { desc = "Go to Left Window" })
@@ -36,13 +36,13 @@ vim.keymap.set("t", "<C-i>", "<cmd>wincmd k<cr>", { desc = "Go to Upper Window" 
 vim.keymap.set("t", "<C-o>", "<cmd>wincmd l<cr>", { desc = "Go to Right Window" })
 
 -- Unbind keymaps for tab management
-vim.keymap.del('n', '<leader><tab>o')
-vim.keymap.del('n', '<leader><tab>l')
-vim.keymap.del('n', '<leader><tab>f')
-vim.keymap.del('n', '<leader><tab><tab>')
-vim.keymap.del('n', '<leader><tab>]')
-vim.keymap.del('n', '<leader><tab>d')
-vim.keymap.del('n', '<leader><tab>[')
+vim.keymap.del("n", "<leader><tab>o")
+vim.keymap.del("n", "<leader><tab>l")
+vim.keymap.del("n", "<leader><tab>f")
+vim.keymap.del("n", "<leader><tab><tab>")
+vim.keymap.del("n", "<leader><tab>]")
+vim.keymap.del("n", "<leader><tab>d")
+vim.keymap.del("n", "<leader><tab>[")
 
 -- Open URL under cursor
 vim.keymap.set("n", "gx", function()
