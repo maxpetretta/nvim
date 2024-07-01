@@ -4,4 +4,3 @@
 
 vim.opt.list = false
 vim.opt.scrolloff = 9
--- vim.g.root_spec = { "cwd" }

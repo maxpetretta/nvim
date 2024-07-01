@@ -6,7 +6,7 @@ return {
   opts = function()
     local lualine_require = require("lualine_require")
     lualine_require.require = require
-    
+
     local icons = require("lazyvim.config").icons
     local colors = require("monokai-pro.colorscheme")
     vim.o.laststatus = vim.g.lualine_laststatus
@@ -48,8 +48,8 @@ return {
       options = {
         theme = theme,
         globalstatus = true,
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "", right = "" },
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },
       sections = {
@@ -58,12 +58,12 @@ return {
           {
             "branch",
             icon = { "", color = { fg = colors.base.white } },
-            color = { fg = colors.base.white, bg = colors.base.dimmed3 }
-          }
+            color = { fg = colors.base.white, bg = colors.base.dimmed3 },
+          },
         },
         lualine_c = {
           LazyVim.lualine.root_dir({ icon = "", color = { fg = colors.base.white, bg = colors.base.dimmed5 } }),
-          { "filetype", colored = false, icon_only = true, padding = { left = 0, right = 0 }},
+          { "filetype", colored = false, icon_only = true, padding = { left = 0, right = 0 } },
           { LazyVim.lualine.pretty_path({ color = { fg = colors.base.white, bg = colors.base.dimmed5 } }) },
           {
             "diagnostics",
